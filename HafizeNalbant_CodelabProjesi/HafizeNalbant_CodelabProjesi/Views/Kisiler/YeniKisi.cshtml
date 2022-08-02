@@ -1,0 +1,25 @@
+﻿@model HafizeNalbant_CodelabProjesi.Models.Kişiler
+
+@{
+    ViewData["Title"] = "YeniKisi";
+    Layout = "~/Views/Shared/_SabitLayout.cshtml";
+}
+
+<br/>
+<form class="form-group" method="post">
+    <b> Adı</b>
+    @Html.TextBoxFor(x=>x.Ad, new {@class="form-control"})
+    <br />
+    <b> Soyadı</b>
+    @Html.TextBoxFor(x=>x.Soyad, new {@class="form-control"})
+    <br />
+    <b> Bölümü</b>
+    @Html.TextBoxFor(x=>x.Bölüm, new {@class="form-control"})
+    <br />
+    <b> Yaşı</b>
+    @Html.TextBoxFor(x=>x.Yaş, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Ekle</button>
+</form>
+
+

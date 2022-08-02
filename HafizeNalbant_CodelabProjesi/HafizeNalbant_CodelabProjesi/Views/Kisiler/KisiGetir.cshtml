@@ -1,0 +1,28 @@
+﻿@model HafizeNalbant_CodelabProjesi.Models.Kişiler
+@{
+    ViewData["Title"] = "KisiGetir";
+    Layout = "~/Views/Shared/_SabitLayout.cshtml";
+}
+
+<br/>
+@using(Html.BeginForm("KisiGuncelle","Kisiler",FormMethod.Post))
+{
+    <b>ID</b>
+    @Html.TextBoxFor(x=>x.id, new {@class="form-control"})
+    <br />
+    <b> Adı</b>
+    @Html.TextBoxFor(x=>x.Ad, new {@class="form-control"})
+    <br />
+    <b> Soyadı</b>
+    @Html.TextBoxFor(x=>x.Soyad, new {@class="form-control"})
+    <br />
+    <b> Bölümü</b>
+    @Html.TextBoxFor(x=>x.Bölüm, new {@class="form-control"})
+    <br />
+    <b> Yaşı</b>
+    @Html.TextBoxFor(x=>x.Yaş, new {@class="form-control"})
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+}
+
+

@@ -1,0 +1,32 @@
+﻿@using HafizeNalbant_CodelabProjesi
+@model List<Kişiler>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SabitLayout.cshtml";
+}
+
+<br/>
+<table class="table table-bordered">
+    <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Bölüm</th>
+        <th>Yaş</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>@x.Ad</td>
+            <td>@x.Soyad</td>
+            <td>@x.Bölüm</td>
+            <td>@x.Yaş</td>
+            <td><a href="/Kisiler/KisiSil/@x.id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Kisiler/KisiGetir/@x.id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Kisiler/YeniKisi/" class="btn btn-primary">Ekle</a>
+
